@@ -1,0 +1,25 @@
+# Ignore environment files (secrets, local overrides)
+.env
+.env.*
+
+# Ignore database volumes and local data
+pg_data/
+pgadmin_data/
+initdb/*~
+*.dump
+
+# Ignore Docker junk
+**/.DS_Store
+**/Thumbs.db
+**/.idea
+**/.vscode
+**/.pytest_cache
+**/__pycache__/
+**/*.pyc
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
