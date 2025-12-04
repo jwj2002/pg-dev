@@ -22,6 +22,9 @@ services:
       retries: 20
 
   pgadmin:
+    # pgAdmin connects to Postgres via host.docker.internal
+    # because Docker Desktop / WSL2 blockes container DNS resolution
+    # for security isolations.
     image: dpage/pgadmin4
     container_name: pgadmin
     restart: unless-stopped
