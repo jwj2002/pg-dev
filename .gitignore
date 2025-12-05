@@ -1,25 +1,48 @@
-# Ignore environment files (secrets, local overrides)
+# ---------------------------------------
+# Environment files (secrets, overrides)
+# ---------------------------------------
 .env
 .env.*
 
-# Ignore database volumes and local data
+# ---------------------------------------
+# Database volumes and generated data
+# ---------------------------------------
 pg_data/
 pgadmin_data/
 initdb/*~
 *.dump
+*.sql~
+*.bak
 
-# Ignore Docker junk
-**/.DS_Store
-**/Thumbs.db
-**/.idea
-**/.vscode
-**/.pytest_cache
-**/__pycache__/
-**/*.pyc
+# ---------------------------------------
+# Docker-related ignores
+# ---------------------------------------
+# (Docker Compose-created temp files, if any)
+*.pid
+*.tmp
 
-# Logs
-*.log
+# ---------------------------------------
+# Python cache files (infra scripts, if present)
+# ---------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
 
-# OS files
+# ---------------------------------------
+# Editor / IDE files
+# ---------------------------------------
+.vscode/
+.idea/
+
+# ---------------------------------------
+# OS junk
+# ---------------------------------------
 .DS_Store
 Thumbs.db
+
+# ---------------------------------------
+# Logs
+# ---------------------------------------
+*.log
